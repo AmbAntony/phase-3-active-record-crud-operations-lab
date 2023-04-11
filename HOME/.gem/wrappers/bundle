@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if
+  [[ -s "/home/amunene/Development/Phase3/phase-3-active-record-crud-operations-lab/HOME/.gem/environment" ]]
+then
+  source "/home/amunene/Development/Phase3/phase-3-active-record-crud-operations-lab/HOME/.gem/environment"
+  exec bundle "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/home/amunene/Development/Phase3/phase-3-active-record-crud-operations-lab/HOME/.gem/environment'" >&2
+  exit 1
+fi
